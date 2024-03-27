@@ -1,0 +1,24 @@
+{
+  "test_values": [
+    {
+        "assertion": true,
+        "value": "ANY:/a"
+    },
+    {
+        "assertion": true,
+        "value": "ANY:/b"
+    },
+    {
+        "assertion": false,
+        "value": "ANY:/ab"
+    },
+    {
+        "assertion": false,
+        "value": "ANY:a"
+    },
+    {
+        "assertion": false,
+        "value": "ANY\\/:a"
+    }
+  ]
+}
