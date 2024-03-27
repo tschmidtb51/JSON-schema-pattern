@@ -23,8 +23,8 @@ console.log('Current regex to test:', '\n', pattern)
 let failed = false
 
 json.test_values.forEach(element => {
-    const result = (r.exec(element.value) != null)
-    failed = failed | (result != element.assertion) 
+    const result = (r.exec(element.value) !== null)
+    failed = failed | (result !== element.assertion) 
     console.log(result, '\t', element)
 });
 
