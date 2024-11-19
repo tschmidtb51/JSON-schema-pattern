@@ -1,6 +1,12 @@
 name: Test schemas for each language
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  merge_group:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   python-tests:
