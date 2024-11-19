@@ -52,11 +52,6 @@ fn main() {
         eprintln!("Usage: {} <json-file-path> <schema-file-path>", args[0]);
         process::exit(1);
     }
-    println!("Arguments:");
-
-    for (index, arg) in args.iter().enumerate() {
-        println!("Argument {}: {}", index, arg);
-    }
 
     let file_path = &args[1];
     let schema_path = &args[2];
