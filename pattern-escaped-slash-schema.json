@@ -23,7 +23,7 @@
           "value": {
             "description": "The escaped pattern",
             "type": "string",
-            "pattern": "^ANY:\\/[ab]$"
+            "pattern": "^WRONGPREFIXANY:\\/[ab]$"
           }
         },
         "additionalProperties": false
