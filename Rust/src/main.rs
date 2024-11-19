@@ -39,7 +39,7 @@ struct TestFile {
     test_values: Vec<TestValue>,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Debug)]
 struct TestValue {
     value: String,
     assertion: bool,
@@ -70,7 +70,8 @@ fn main() {
     let pattern = &schema.properties.test_values.items.properties.value.pattern;
     let regex = Regex::new(pattern).expect("Error compiling regex pattern");
 
-    println!("Current regex to test:\n{}", pattern);
+    // Use Debug trait (":?") to properly show the raw pattern, avoiding the backslash being escaped
+    println!("Current regex to test:\n{:?}", pattern);
 
     let mut failed = false;
 
