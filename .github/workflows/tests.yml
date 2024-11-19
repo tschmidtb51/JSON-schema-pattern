@@ -27,4 +27,4 @@ jobs:
 
       - name: Run Python tests with matrix argument
         run: |
-          python test-pattern.py testdata.json ${{ matrix.schema }}
+          python Python/test-pattern.py testdata.json ${{ matrix.schema }}
