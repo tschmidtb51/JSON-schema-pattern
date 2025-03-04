@@ -59,4 +59,4 @@ jobs:
 
       - name: Run Rust tests
         run: |
-          cargo run Rust/src/main.rs testdata.json ${{ matrix.schema }}
+          cargo run --manifest-path Rust/Cargo.toml Rust/src/main.rs testdata.json ${{ matrix.schema }}
