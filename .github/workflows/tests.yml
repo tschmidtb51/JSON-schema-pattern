@@ -38,6 +38,12 @@ jobs:
   rust-tests:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        schema:
+          - pattern-escaped-slash-schema.json
+          - pattern-unescaped-slash-schema.json
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -53,4 +59,4 @@ jobs:
 
       - name: Run Rust tests
         run: |
-          cargo test -- --nocapture
+          cargo run Rust/src/main.rs testdata.json ${{ matrix.schema }}
