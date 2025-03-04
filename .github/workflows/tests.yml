@@ -55,7 +55,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cargo fetch
+          cargo fetch -manifest-path Rust/Cargo.toml
 
       - name: Run Rust tests
         run: |
