@@ -81,4 +81,4 @@ jobs:
 
       - name: Run Deno tests
         run: |
-          deno run --allow-read test-pattern.ts testdata.json ${{ matrix.schema }}
+          deno run --allow-read Deno/test-pattern.ts testdata.json ${{ matrix.schema }}
