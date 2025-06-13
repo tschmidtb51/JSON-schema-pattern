@@ -2,7 +2,7 @@
   "test_values": [
     {
         "assertion": true,
-        "value": "BANY:/a"
+        "value": "ANY:/a"
     },
     {
         "assertion": true,
